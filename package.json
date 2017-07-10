@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/adekbadek/react-mousemove-transform/issues"
   },
-  "homepage": "https://github.com/adekbadek/react-mousemove-transform#readme"
+  "homepage": "https://github.com/adekbadek/react-mousemove-transform#readme",
+  "dependencies": {
+    "react": "^15.6.1"
+  }
 }
