@@ -26,7 +26,7 @@ export default (config = {}) => WrappedComponent => {
     componentWillUnMount () {
       document.removeEventListener('mousemove', this.listen)
     }
-    render() {
+    render () {
       return (
         <div
           style={{
