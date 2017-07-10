@@ -5,3 +5,7 @@ export const mapRange = (x, inMin, inMax, outMin, outMax) => {
 export const getDisplayName = (WrappedComponent) => {
   return WrappedComponent.displayName || WrappedComponent.name || 'Component'
 }
+
+export const getTransformValue = (pos, max, maxTransform = 5) => {
+  return Math.round(mapRange(pos - max, -max, max, -maxTransform, maxTransform))
+}

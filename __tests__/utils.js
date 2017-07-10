@@ -1,4 +1,4 @@
-import { mapRange, getDisplayName } from '../src/utils/helpers'
+import { mapRange, getDisplayName, getTransformValue } from '../src/utils/helpers'
 
 describe('mapRange', () => {
   test('mapRange', () => {
@@ -19,5 +19,11 @@ describe('getDisplayName', () => {
   })
   test('with nothing', () => {
     expect(getDisplayName({})).toEqual('Component')
+  })
+})
+
+describe('getTransformValue', () => {
+  test('getTransformValue', () => {
+    expect(getTransformValue(100, 200, 20)).toEqual(-10)
   })
 })

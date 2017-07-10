@@ -1,18 +1,12 @@
 import React from 'react'
 
-import { mapRange, getDisplayName } from './utils/helpers'
+import { getTransformValue, getDisplayName } from './utils/helpers'
 
 export default (config = {}) => WrappedComponent => {
   class TransformedComponent extends React.Component {
     state = {
       position: [0, 0],
       maxs: [0, 0],
-    }
-    getTransformValue = (pos, max) => {
-      const MAX_TRANSFORM = config.maxTransform || 5
-      const maxHalf = this.state.maxs[max] / 2
-      const val = pos - maxHalf
-      return Math.round(mapRange(val, -maxHalf, maxHalf, -MAX_TRANSFORM, MAX_TRANSFORM))
     }
     listen = (e) => {
       this.setState({position: [e.clientX, e.clientY]})
@@ -27,12 +21,14 @@ export default (config = {}) => WrappedComponent => {
       document.removeEventListener('mousemove', this.listen)
     }
     render () {
+      const rotateX = getTransformValue(this.state.position[1], this.state.maxs[1] / 2, config.maxTransform)
+      const rotateY = getTransformValue(this.state.position[0], this.state.maxs[0] / 2, config.maxTransform)
       return (
         <div
           style={{
             transform: `
-              rotateY(${this.getTransformValue(this.state.position[0], 0)}deg)
-              rotateX(${-this.getTransformValue(this.state.position[1], 1)}deg)
+              rotateX(${-rotateX}deg)
+              rotateY(${rotateY}deg)
             `,
             transition: 'all 200ms'
           }}
