@@ -4,7 +4,8 @@
   "description": "CSS transforms on mousemove higher-order component aka wobble on hover",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,19 @@
   "homepage": "https://github.com/adekbadek/react-mousemove-transform#readme",
   "dependencies": {
     "react": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.2.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^20.0.4"
   }
 }
