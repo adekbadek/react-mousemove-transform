@@ -2,7 +2,7 @@
   "name": "react-mousemove-transform",
   "version": "0.0.0",
   "description": "CSS transforms on mousemove higher-order component aka wobble on hover",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
