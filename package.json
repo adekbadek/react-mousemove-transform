@@ -1,0 +1,26 @@
+{
+  "name": "react-mousemove-transform",
+  "version": "0.0.0",
+  "description": "CSS transforms on mousemove higher-order component aka wobble on hover",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adekbadek/react-mousemove-transform.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "transform",
+    "mousemove",
+    "wobble"
+  ],
+  "author": "Adam Boro <adam@adamboro.com> (https://adamboro.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adekbadek/react-mousemove-transform/issues"
+  },
+  "homepage": "https://github.com/adekbadek/react-mousemove-transform#readme"
+}
