@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watch",
     "test:single": "jest",
-    "lint": "eslint .",
+    "lint": "eslint ./src",
     "commit": "git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "prebuild": "rimraf dist",
