@@ -4,6 +4,8 @@
 ](https://travis-ci.org/adekbadek/react-mousemove-transform)
 
 ```javascript
+import withTransform from 'react-mousemove-transform'
+
 @withTransform()
 class Yo extends React.Component {
   render() {

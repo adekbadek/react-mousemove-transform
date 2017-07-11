@@ -1,6 +1,5 @@
 {
   "name": "react-mousemove-transform",
-  "version": "0.0.0-development",
   "description": "CSS transforms on mousemove higher-order component aka wobble on hover",
   "main": "dist/index.js",
   "scripts": {
