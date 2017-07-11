@@ -2,12 +2,14 @@
   "name": "react-mousemove-transform",
   "version": "0.0.0",
   "description": "CSS transforms on mousemove higher-order component aka wobble on hover",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest --watch",
     "lint": "eslint .",
     "commit": "git-cz",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "prebuild": "rimraf dist",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -26,14 +28,21 @@
     "url": "https://github.com/adekbadek/react-mousemove-transform/issues"
   },
   "homepage": "https://github.com/adekbadek/react-mousemove-transform#readme",
+  "files": [
+    "src",
+    "dist"
+  ],
   "dependencies": {
     "react": "^15.6.1"
   },
   "devDependencies": {
+    "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "commitizen": "^2.9.6",
     "conventional-changelog-cli": "^1.3.1",
     "cz-conventional-changelog": "^2.0.0",
@@ -44,7 +53,8 @@
     "eslint-plugin-node": "^5.1.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "jest": "^20.0.4"
+    "jest": "^20.0.4",
+    "webpack": "^3.2.0"
   },
   "config": {
     "commitizen": {
