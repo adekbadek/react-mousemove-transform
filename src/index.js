@@ -7,6 +7,7 @@ export default (config = {}) => WrappedComponent => {
     state = {
       position: [0, 0],
       maxs: [0, 0],
+      addTransition: true,
     }
     listen = (e) => {
       this.setState({position: [e.clientX, e.clientY]})
@@ -30,7 +31,15 @@ export default (config = {}) => WrappedComponent => {
               rotateX(${-rotateX}deg)
               rotateY(${rotateY}deg)
             `,
-            transition: 'all 200ms'
+            transition: this.state.addTransition ? 'all 200ms' : ''
+          }}
+          onMouseEnter={() => {
+            setTimeout(() => {
+              this.setState({addTransition: false})
+            }, 300)
+          }}
+          onMouseLeave={() => {
+            this.setState({addTransition: true})
           }}
         >
           <WrappedComponent {...this.props} />
