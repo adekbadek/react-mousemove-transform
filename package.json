@@ -30,7 +30,6 @@
   },
   "homepage": "https://github.com/adekbadek/react-mousemove-transform#readme",
   "files": [
-    "src",
     "dist"
   ],
   "dependencies": {
