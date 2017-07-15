@@ -54,8 +54,9 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^20.0.4",
-    "webpack": "^3.2.0",
-    "semantic-release": "^6.3.6"
+    "rimraf": "^2.6.1",
+    "semantic-release": "^6.3.6",
+    "webpack": "^3.2.0"
   },
   "config": {
     "commitizen": {
